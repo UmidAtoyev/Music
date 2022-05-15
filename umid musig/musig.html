@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umid Music player</title>
+  <!-- Load FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="musig.css">
+  <link rel="icon" href="  n§" type="image/icon type">
+</head>
+
+
+
+<body>
+  <div class="player">
+    
+    
+    <div class="details">
+            <div class="now-playing">PLAYING x OF y</div>
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
+    </div>
+    
+    
+     <div class="buttons">
+             <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>   <!-- bu div da biza ashulani chapka otqazishchun knopka yasadik  -->
+             <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>  <!--  bu divda biza ashulani pauza qiladigan kodni yozdik bundan bitta tepadegi divdayam clikc bilan ishlasin bundayam click yani ustiga bosganda ishlasin divommiz-->
+             <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div> <!--  bu divda biza endi oldinga otqazishchun bundan bitta oldingida pauza undan keyingisida ashulani orqaga qaytarish bunda esa oldinga otqazish chun-->
+     </div>
+   
+   
+   
+    <div class="slider_container">
+             <div class="current-time">00:00</div>  <!-- bu divda biza misolchun ashula 3:45 sekund bosa ashulani ustiga bosganimizda aashulani sekundini hisoblab boradi misolchun 3:45 sekund ozi toliq ashula aa bu ashulani bosganinmizdan boshlab 3:45 sekund boguncha 0 dan hisoblidi-->
+             <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">   <!--  input typda biza ashula qoyilganda pasida ashula tlib borvuradi yu usha narsasi anu vidiolani pasida vidio sekundiga qarab yuradi yu chiqiz usha narsa si-->
+             <div class="total-duration">00:00</div> <!-- bu divda biza doyim ishlatadigan playerlad korganimizdek karocci bu ashulani opshiy necci minutligini korsitib turadi misol chun 3:45 ashula sekundiga qarab shu holatda turadi -->
+    </div>
+   
+   
+   
+    <div class="slider_container">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>  <!--  bia bu divladaashulani balan pas qilish berdik birinchi divda fa down da ashulani pasaytirish knopkasini berdi rasim chiqib turadi bundan oldingi divlaga oxshab
+      ikkinchi divda inputda usha boyagideg vidiolani tegida chiqib turadiganlaa oxshab yuradigan br balode karocci 
+      uchinchi  div fa up da balan qilish rasmi chiqib turadigan rasmmi ili bilmadm nima karocci ushani yasadi bu div ikkinchi divvi oldida turadi -->
+
+
+</div>
+
+  <!-- Load the main script for the player -->
+  <script src="music.js"></script>
+</body>
+</html>
